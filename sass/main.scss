@@ -153,7 +153,7 @@ body {
               }
             }
             &::-moz-slider-thumb {
-              -webkit-appearance: none;
+              -moz-appearance: none;
               appearance: none;
               background-image: url("../images/icon-slider.svg");
               background-repeat: no-repeat;
