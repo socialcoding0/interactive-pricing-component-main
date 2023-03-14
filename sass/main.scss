@@ -152,6 +152,23 @@ body {
                 background-color: hsl(176, 65%, 41%);
               }
             }
+            &::-moz-slider-thumb {
+              -webkit-appearance: none;
+              appearance: none;
+              background-image: url("../images/icon-slider.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              width: 35px;
+              height: 35px;
+              background-color: $Strong-Cyan;
+              border-radius: 100%;
+              box-shadow: 0 12px 10px 5px hsla(174, 77%, 80%, 0.6);
+              border: 0px solid #000000;
+              &:active,
+              &:hover {
+                background-color: hsl(176, 65%, 41%);
+              }
+            }
           }
         }
         .input-0 {
