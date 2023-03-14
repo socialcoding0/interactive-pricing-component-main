@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// ### Primary
+
+// (Full Slider Bar)
+$Soft-Cyan: hsl(174, 77%, 80%);
+// (Slider Backround)
+$Strong-Cyan: hsl(174, 86%, 45%);
+// (Discount Background)
+$Light-Grayish-Red: hsl(14, 92%, 95%);
+// (Discount Text)
+$Light-Red: hsl(15, 100%, 70%);
+// (CTA Text)
+$Pale-Blue: hsl(226, 100%, 87%);
+
+// ### Neutral
+
+// (Pricing Component Background)
+$White: hsl (0, 0%, 100%);
+// (Main Background)
+$Very-Pal-Blue: hsl(230, 100%, 99%);
+// (Empty Slider Bar)
+$Light-Grayish-Blue-slider: hsl(224, 65%, 95%);
+// (Toggle Background)
+$Light-Grayish-Blue: hsl(223, 50%, 87%);
+// (Text)
+$Grayish-Blue: hsl(225, 20%, 60%);
+// (Text & CTA Background)
+$Dark-Desaturated-Blue: hsl(227, 35%, 25%);
+
+button {
+  font-family: "Manrope", sans-serif;
+}
+body {
+  background: $Very-Pal-Blue;
+  background-image: url("../images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 400px;
+
+  font-family: "Manrope", sans-serif;
+  min-height: 100vh;
+  display: flex;
+
+  #input-container span,
+  #discount p,
+  .info p,
+  header p {
+    color: $Grayish-Blue;
+  }
+
+  #pay p,
+  header h1 {
+    color: $Dark-Desaturated-Blue;
+  }
+
+  main {
+    width: 35%;
+    margin: auto;
+    padding: 3rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    min-width: 538px;
+
+    header {
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      background-image: url("../images/pattern-circles.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center, center;
+      h1 {
+        font-size: 1.9rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+    #container {
+      display: flex;
+      flex-direction: column;
+      padding: 3rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0px 8px 20px 1px rgba(133, 143, 173, 0.1);
+      gap: 2rem;
+      #input-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        gap: 2rem;
+        > span {
+          font-size: 0.8rem;
+          font-weight: 800;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+        #pay {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+          p {
+            font-weight: 800;
+            font-size: 2rem;
+          }
+          span {
+          }
+        }
+
+        label {
+          width: 100%;
+          input[type="range"] {
+            width: 100%;
+            -webkit-appearance: none;
+            appearance: none;
+            background: linear-gradient(
+              to right,
+              $Soft-Cyan 0%,
+              $Strong-Cyan 50%,
+              $Light-Grayish-Blue-slider 50%,
+              $Light-Grayish-Blue 100%
+            );
+            height: 8px;
+            border-radius: 20px;
+            &::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              appearance: none;
+              background-image: url("../images/icon-slider.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              width: 35px;
+              height: 35px;
+              background-color: $Strong-Cyan;
+              border-radius: 100%;
+              box-shadow: 0 12px 10px 5px hsla(174, 77%, 80%, 0.6);
+              border: 0px solid #000000;
+              &:active,
+              &:hover {
+                background-color: hsl(176, 65%, 41%);
+              }
+            }
+          }
+        }
+        .input-0 {
+          background: linear-gradient(
+            to right,
+            $Soft-Cyan 0%,
+            $Strong-Cyan 0%,
+            $Light-Grayish-Blue-slider 0%,
+            $Light-Grayish-Blue 100%
+          ) !important;
+        }
+
+        .input-25 {
+          background: linear-gradient(
+            to right,
+            $Soft-Cyan 0%,
+            $Strong-Cyan 25%,
+            $Light-Grayish-Blue-slider 25%,
+            $Light-Grayish-Blue 100%
+          ) !important;
+        }
+
+        .input-50 {
+          background: linear-gradient(
+            to right,
+            $Soft-Cyan 0%,
+            $Strong-Cyan 50%,
+            $Light-Grayish-Blue-slider 50%,
+            $Light-Grayish-Blue 100%
+          ) !important;
+        }
+
+        .input-75 {
+          background: linear-gradient(
+            to right,
+            $Soft-Cyan 0%,
+            $Strong-Cyan 75%,
+            $Light-Grayish-Blue-slider 75%,
+            $Light-Grayish-Blue 100%
+          ) !important;
+        }
+
+        .input-100 {
+          background: linear-gradient(
+            to right,
+            $Soft-Cyan 0%,
+            $Strong-Cyan 100%,
+            $Light-Grayish-Blue-slider 100%,
+            $Light-Grayish-Blue 100%
+          ) !important;
+        }
+      }
+
+      #discount {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 1rem;
+        gap: 1rem;
+
+        p {
+          font-size: 0.7rem;
+          font-weight: 800;
+        }
+        #toggle {
+          min-width: 40px;
+          max-width: 40px;
+          height: 20px;
+          cursor: pointer;
+          background-color: $Light-Grayish-Blue;
+          border-radius: 20px;
+          padding: 0rem 0.2rem;
+          display: flex;
+          align-items: center;
+          transition: 0.4s ease;
+          &::after {
+            width: 14px;
+            height: 14px;
+            content: "";
+            display: block;
+            background-color: white;
+            position: absolute;
+            border-radius: 100%;
+            transform: translate(1px, 0px);
+            transition: 0.4s ease;
+          }
+        }
+
+        .toggle-active {
+          background-color: $Strong-Cyan !important;
+          &::after {
+            transform: translate(20px, 0px) !important;
+          }
+        }
+        #percentage {
+          background-color: $Light-Grayish-Red;
+          font-size: 0.6rem;
+          padding: 0.1rem 0.4rem;
+          border-radius: 10px;
+          color: $Light-Red;
+          font-weight: 800;
+        }
+      }
+
+      #footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        #left-footer {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          .info {
+            display: flex;
+            align-items: center;
+            font-size: 0.8rem;
+            gap: 0.5rem;
+            p {
+            }
+          }
+        }
+        button {
+          outline: none;
+          border: none;
+          padding: 0.8rem 2.5rem;
+          border-radius: 20px;
+          color: $Grayish-Blue;
+          background-color: $Dark-Desaturated-Blue;
+          font-weight: 800;
+          font-size: 0.7rem;
+          cursor: pointer;
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  html {
+    font-size: 12px;
+  }
+  body {
+    main {
+      width: 90%;
+      min-width: 300px;
+
+      header {
+        text-align: center;
+      }
+      #container {
+        padding: 3rem 1.5rem;
+        #input-container {
+          flex-direction: column;
+          span {
+            order: 1;
+          }
+          #pay {
+            order: 3;
+          }
+          label {
+            order: 2;
+          }
+        }
+
+        #footer {
+          flex-direction: column;
+          gap: 2rem;
+        }
+      }
+    }
+  }
+}
